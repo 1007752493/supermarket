@@ -8,3 +8,6 @@ git push
 
 git remote add origin https://github.com/1007752493/supermarket.git
 git push -u origin master
+a2960226+
+
+npm install vue-router --save
