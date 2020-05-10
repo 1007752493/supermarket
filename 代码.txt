@@ -12,3 +12,7 @@ git push -u origin master
 npm install vue-router --save
 npm install axios --save
 npm install better-scroll --save
+npm install vuex --save
+npm install fastclick --save
+npm install vue-lazyload --save       v-lazy
+npm install postcss-px-to-viewport --save-dev

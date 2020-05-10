@@ -1,5 +1,5 @@
 <template>
-  <div class="tab-control">
+  <div class="tab-Control">
     <div v-for='(item,index) in titles'
          class='tab-control-item'
          :class="{active:index===currentIndex}"
@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style scoped>
-.tab-control {
+.tab-Control {
   display: flex;
   text-align: center;
   height: 40px;

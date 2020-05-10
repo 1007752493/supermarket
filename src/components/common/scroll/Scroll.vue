@@ -36,16 +36,22 @@ export default {
       probeType: this.probeType
     })
     //监听滚动的位置
-    this.scroll.on('scroll', (position) => {
-      // console.log(position)
-      this.$emit('scroll', position)
-    })
+    if (this.probeType == 2 || this.probeType == 3) {
+      this.scroll.on('scroll', (position) => {
+        // console.log(position)
+        this.$emit('scroll', position)
+      })
+    }
     //监听上拉事件
-    this.scroll.on('pullingUp', () => {
-      // console.log('上拉加载更多')
-      this.$emit('pullingUp')
-    })
-    this.scroll.scrollTo(0, 0)
+    if (this.pullUpLoad) {
+      this.scroll.on('pullingUp', () => {
+        // console.log('上拉加载更多')
+        this.$emit('pullingUp')
+      })
+    }
+    this.scroll && this.scroll.refresh() //刷新当前页面
+
+    this.scroll && this.scroll.scrollTo(0, 0)
   },
   methods: {
     finishPullUp () { this.scroll.finishPullUp() }

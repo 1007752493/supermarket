@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <ul class="content">
+    <!-- <ul class="content">
       <button @click='btnClick'>按钮</button>
       <li>分类1</li>
       <li>分类2</li>
@@ -102,7 +102,8 @@
       <li>分类98</li>
       <li>分类99</li>
       <li>分类100</li>
-    </ul>
+    </ul> -->
+    <h2>分类</h2>
   </div>
 </template>
 
@@ -111,15 +112,17 @@ import BSscroll from 'better-scroll'
 
 export default {
   name: 'category',
-  data () {
+  data() {
     return {
       scroll: null,
     }
   },
-  mounted () {
+  mounted() {
     // 0,1不侦测实时位置，2不侦测惯性滑动的实时位置,3只要是滚动，都侦测
-    this.scroll = new BSscroll('.wrapper', {      probeType:
-        3, pullUpLoad: true    }),
+    ;(this.scroll = new BSscroll('.wrapper', {
+      probeType: 3,
+      pullUpLoad: true,
+    })),
       this.scroll.on('scroll', (position) => {
         // console.log(position)
       })
@@ -128,10 +131,10 @@ export default {
     })
   },
   methods: {
-    btnClick () {
+    btnClick() {
       console.log('fuck')
-    }
-  }
+    },
+  },
 }
 </script>
 
